@@ -9,24 +9,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-
-//Solo se incluirán en el JSON las propiedades que no sean nulas
-@JsonInclude(JsonInclude.Include.NON_NULL) 
-//Especifica el orden en el que las propiedades del objeto deben aparecer en el JSON
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "_id",
-    "id",
-    "type",
-    "geometry",
-    "properties"
+"id",
+"type",
+"geometry",
+"properties"
 })
 
 @Data
 @AllArgsConstructor
-@Document(collection="hotelData")
+@Document(collection="pueblos")
 
-public class Hotel {
+public class Pueblo {
 		
 	@JsonProperty("_id")
 	private String id;
